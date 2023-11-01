@@ -9,8 +9,8 @@
 <body>
     <div class="hero">
         <header>
-            <h6><span>Round 1</span></h6>
-            <h1><span>00:00</span></h1>
+            <h6>Round <span id="round">1</span></h6>
+            <h1><span id="timer">00:00</span></h1>
         </header>
     </div>
 
@@ -30,9 +30,11 @@
             </div>
         </section>
         <section class="start-button">
-            <button id="startBtn">Start</button>
+            <button id="startBtn" onclick="startTimer()">Start</button>  
         </section>
     </div>
 
+
+    <script src="script.js"></script>
 </body>
 </html>
