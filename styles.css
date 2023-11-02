@@ -1,12 +1,13 @@
 /* styles.css */
 
 body {
-    background-color: black;
+    background-color: rgb(66, 66, 66);
     
-    font-family: Arial, sans-serif;
-    color: white;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(233, 233, 233);
     text-align: center;
-    padding: 50px;
+    margin: 0 0 0 0;
+    /* padding: 50px; */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,14 +16,21 @@ body {
 }
 
 header h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 8rem;
+    margin-bottom: 0px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
+header h6 {
+    font-size: 2rem;
+}
+
 .hero{
     background-image: url('boxing02.jpg'); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80vh;
     width: 100%;
     margin: 0 0 0 0;
@@ -42,6 +50,7 @@ header h1 {
 .control {
     background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
     padding: 20px;
+    margin: 5px;
     border-radius: 5px;
 }
 
@@ -60,6 +69,7 @@ input {
 }
 
 .start-button button {
+    font-family: 'Oswald', sans-serif;
     background-color: red;
     color: white;
     font-size: 24px;

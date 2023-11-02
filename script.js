@@ -1,14 +1,8 @@
-// document.addEventListener('DOMContentLoaded')
 
-
-
-// function setUpTimer(currentRound, roundTime, restTime) {
-    
-// }
 
 function startTimer() {
     const roundTime = document.getElementById('roundTime').value * 60; // in seconds
-    const restTime = document.getElementById('restTime').value * 60; // in seconds
+    const restTime = document.getElementById('restTime').value; // in seconds
     const numRounds = document.getElementById('numRounds').value;
 
     let currentRound = 1;
@@ -25,7 +19,7 @@ function startTimer() {
         } else {
             clearInterval(timerInterval); // end the timer
         }
-        console.log(`The round time is ${roundTime}.  The rest time is ${restTime}.  The number of rounds is ${numRounds}.`)
+        console.log(`The round time is ${roundTime}.  The rest time is ${restTime}.  The current round is ${currentRound}.  The number of rounds is ${numRounds}.`)
         document.getElementById('timer').textContent = formatTime(remainingTime)
         // Update the display here (e.g., remaining time, current round, etc.)
     }, 1000); // update every second
@@ -34,6 +28,6 @@ function startTimer() {
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
-    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`
+    return `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`
     
 }
